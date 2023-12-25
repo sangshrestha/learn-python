@@ -1,9 +1,15 @@
-args = ["P", "Q", "R"]
-premises = ["(PnQ)u(¬Pn¬Q)", "¬PuQ", "(Pu¬Q)n(Qu¬P)", "¬(PuQ)", "(QnP)u¬P"]
+from tabulate import tabulate
+
+args = ["P", "Q"]
+premises = ["(PuQ)", "¬(¬Pn¬Q)"]
+
+# 8 ["(PnQ)u(¬Pn¬Q)", "¬PuQ", "(Pu¬Q)n(Qu¬P)", "¬(PuQ)", "(QnP)u¬P"]
 
 count = len(args)
 
+
 def main():
+    table = [args + premises]
     for row in range(2**count):
         binary_string = format(row ,"b").zfill(count)
         lookup = {}
@@ -14,7 +20,9 @@ def main():
         for premise in premises:
             lookup[premise] = eval(trans(premise))
 
-        print(row + 1, lookup)
+        table.append(list(lookup.values()))
+
+    print(tabulate(table))
 
 def trans(string):
     eval_string = ""
