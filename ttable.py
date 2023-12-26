@@ -1,7 +1,7 @@
 from tabulate import tabulate
 
 args = ["P", "Q"]
-premises = ["(PuQ)", "¬(¬Pn¬Q)"]
+premises = ["(Pn¬Q)u(¬PnQ)"]
 
 # 8 ["(PnQ)u(¬Pn¬Q)", "¬PuQ", "(Pu¬Q)n(Qu¬P)", "¬(PuQ)", "(QnP)u¬P"]
 
