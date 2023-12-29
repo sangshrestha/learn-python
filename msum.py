@@ -8,4 +8,5 @@ def main():
     print(np.dot(C, A), sep="\n\n")
 
 
-main()
+if __name__ == "__main__":
+    main()
