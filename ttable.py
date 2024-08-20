@@ -1,9 +1,8 @@
+# truth table
 from tabulate import tabulate
 
 args = ["P", "Q", "R"]
 premises = ["¬Pu(¬QuR)", "¬Qu(¬PuR)", "(¬PuQ)n(¬PuR)", "¬(PnQ)uR", "¬Pu(QnR)"]
-
-# 8 ["(PnQ)u(¬Pn¬Q)", "¬PuQ", "(Pu¬Q)n(Qu¬P)", "¬(PuQ)", "(QnP)u¬P"]
 
 count = len(args)
 

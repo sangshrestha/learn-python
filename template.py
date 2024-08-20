@@ -1,4 +1,4 @@
-## Template
+## Template used for most of the problems
 from helper import test
 
 
